@@ -1,6 +1,9 @@
 set -x
 snap install docker
 
+echo "Waiting for 10 sec for docker service to come up ..."
+sleep 10
+
 export APPS_JSON_BASE64=$(base64 -w 0 ./apps.json)
 echo -n ${APPS_JSON_BASE64} | base64 -d 
 
