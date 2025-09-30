@@ -1,19 +1,19 @@
 [
   {
     "url": "https://github.com/frappe/erpnext",
-    "branch": "version-15"
+    "branch": "v15.79.0"
   },
   {
     "url": "https://github.com/frappe/payments",
-    "branch": "version-15"
+    "branch": "v0.0.1"
   },
   {
     "url": "https://github.com/frappe/hrms",
-    "branch": "version-15"
+    "branch": "v15.50.1"
   },
   {
     "url": "https://github.com/resilient-tech/india-compliance",
-    "branch": "version-15"
+    "branch": "v15.22.1"
   },
   {
     "url": "https://github.com/Midocean-Technologies/business_theme_v14",
