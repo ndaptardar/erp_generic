@@ -1,3 +1,6 @@
+set -x
+snap install docker
+
 export APPS_JSON_BASE64=$(base64 -w 0 ./apps.json)
 echo -n ${APPS_JSON_BASE64} | base64 -d 
 
