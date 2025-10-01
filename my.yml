@@ -81,9 +81,10 @@ services:
         bench --site frontend install-app india_compliance;
         bench --site frontend install-app hrms;
         bench --site frontend install-app payments;
+        bench --site frontend install-app netmanthan_themes;
         #bench --site frontend install-app business_theme_v14;
         #bench --site frontend install-app newara;
-        bench --site frontend install-app netmanthan_themes;
+
 
 
   db:
