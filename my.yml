@@ -2,7 +2,7 @@ version: "3"
 
 services:
   backend:
-    image: erpnext_custom:v0.6
+    image: erpnext_custom:v0.7
     networks:
       - frappe_network
     deploy:
@@ -18,7 +18,7 @@ services:
       MARIADB_ROOT_PASSWORD: admin
 
   configurator:
-    image: erpnext_custom:v0.6
+    image: erpnext_custom:v0.7
     networks:
       - frappe_network
     deploy:
@@ -47,7 +47,7 @@ services:
       - logs:/home/frappe/frappe-bench/logs
 
   create-site:
-    image: erpnext_custom:v0.6
+    image: erpnext_custom:v0.7
     networks:
       - frappe_network
     deploy:
@@ -88,7 +88,7 @@ services:
 
 
   db:
-    image: mariadb:10.6
+    image: mariadb:10.7
     networks:
       - frappe_network
     healthcheck:
@@ -102,7 +102,7 @@ services:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
       - --skip-character-set-client-handshake
-      - --skip-innodb-read-only-compressed # Temporary fix for MariaDB 10.6
+      - --skip-innodb-read-only-compressed # Temporary fix for MariaDB 10.7
     environment:
       MYSQL_ROOT_PASSWORD: admin
       MARIADB_ROOT_PASSWORD: admin
@@ -110,7 +110,7 @@ services:
       - db-data:/var/lib/mysql
 
   frontend:
-    image: erpnext_custom:v0.6
+    image: erpnext_custom:v0.7
     networks:
       - frappe_network
     depends_on:
@@ -136,7 +136,7 @@ services:
       - "8080:8080"
 
   queue-long:
-    image: erpnext_custom:v0.6
+    image: erpnext_custom:v0.7
     networks:
       - frappe_network
     deploy:
@@ -152,7 +152,7 @@ services:
       - logs:/home/frappe/frappe-bench/logs
 
   queue-short:
-    image: erpnext_custom:v0.6
+    image: erpnext_custom:v0.7
     networks:
       - frappe_network
     deploy:
@@ -186,7 +186,7 @@ services:
         condition: on-failure
 
   scheduler:
-    image: erpnext_custom:v0.6
+    image: erpnext_custom:v0.7
     networks:
       - frappe_network
     deploy:
@@ -200,7 +200,7 @@ services:
       - logs:/home/frappe/frappe-bench/logs
 
   websocket:
-    image: erpnext_custom:v0.6
+    image: erpnext_custom:v0.7
     networks:
       - frappe_network
     deploy:
